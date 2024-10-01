@@ -25,3 +25,16 @@ test('Link Text - CSS', async ({ page }) => {
     await page.close()
 
 })
+
+test('Link Text2 - CSS', async ({ page }) => {
+    await page.goto('https://learner.manabie.net/');
+
+    //find forgot password link // refer other location on playwright
+    await page.goto('https://learner.manabie.net/#/auth_search_organization');
+    await page.getByPlaceholder('Organization ID').click();
+    await page.getByPlaceholder('Organization ID').fill('lmsv2');
+    await page.getByPlaceholder('Organization ID').dblclick();
+
+
+
+})
